@@ -1,6 +1,109 @@
-.indie-flower-regular {
+* {
     font-family: "Indie Flower", serif;
-    font-weight: 400;
+    font-weight: 1000;
     font-style: normal;
+}
+
+.container {
+    /* border: 2px solid black; */
+    height: 97vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+    display: flex;
+    border-radius: 4px;
+}
+
+
+
+.card__face {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    /* line-height: 260px; */
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    
+}
+
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    width: 75%;
+}
+
+.LoginForm::placeholder {
+    color: #666;
+    opacity: 0.8;   
+}
+
+.flip-card__input {
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #666;
+    background-color: #fff;
+    box-shadow: 4px 4px #323232;
+    font-size: 15px;
+    font-weight: 600;
+    color: #323232;
+    padding: 5px 10px;
+    outline: none;
+  }
+
+  .flip-card__input:focus {
+    border: 2px solid #323232;
+  }
+
+  .flip-card__btn:active {
+    box-shadow: 0px 0px #323232;
+    transform: translate(3px, 3px);
+
+  }
+
+  .flip-card__btn {
+    margin: 20px 0 20px 0;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #323232;
+    background-color: #fff;
+    box-shadow: 4px 4px #323232;
+    font-size: 17px;
+    font-weight: 600;
+    color: #323232;
+    cursor: pointer;
+  } 
+
+  
+.card__face--front {
+    background: #e8e8e8;
+  }
+  
+.card__face--back {
+    background: slateblue;
+    transform: rotateY(180deg);
+  }
+
+ .card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
   }
   
